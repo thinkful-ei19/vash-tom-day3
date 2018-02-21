@@ -201,3 +201,20 @@ function fourthMeal(whoseMeals) {
    console.log(whoseMeals.meals[4]);
 } 
 fourthMeal(hobbitMeals);
+
+
+//(4)
+const people = [
+	{name: "Superman", jobTitle: "super hero"},
+	{name: "Sherlock Holmes", jobTitle: "detective"},
+	{name: "Batman", jobTitle: "super hero"},
+	{name: "Venom", jobTitle: "super venom"}
+]
+
+const superPeople = function(indiv){
+	indiv.forEach(ppl => {
+		console.log(`${ppl.name} ${ppl.jobTitle}`);}
+	)}
+	
+
+superPeople(people);
