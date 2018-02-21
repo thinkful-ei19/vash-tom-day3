@@ -94,7 +94,6 @@ let students = [
 
 
 function makeStudentReport(data) {  // does this have to return a new array with .map??
-
   return data.forEach(student => {
     console.log(`${student.name} Grade = ${student.grade} `); 
   });
@@ -105,11 +104,24 @@ function makeStudentReport(data) {  // does this have to return a new array with
 
 
 function enrollInSummerSchool(students) {
-	students.forEach(person => {
-		person.status = 'In Summer school';
-		console.log(students);
-	});
+  for (let i = 0; i < students.length; i++) {
+    students[i].status = 'In Summer School';
+  }
+  return students;
 }
 
 
-enrollInSummerSchool(students);
+//enrollInSummerSchool(students);
+//console.log(students);
+// Find by Id
+
+function findById(items,idNum) {
+  for (let i = 0; i < items.length; i++) {
+    if    (items[i]['id'] === idNum) {
+      return items[i];
+    }
+      
+  }    
+}
+//const data = [{ id: 1, foo: 'bar' }, { id: 2, foo: 'bizz' }];
+//console.log(findById(data, 2)); // should return {id: 2, foo: 'bizz'}
