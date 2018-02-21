@@ -24,7 +24,7 @@ const createMyObject = function () {
 
 
 //Object Update
-function updateObject(obj) {
+const updateObject = function(obj) {
   obj.foo = 'foo';
   obj.bar = 'bar';
   obj.bizz = 'bizz';
@@ -37,8 +37,9 @@ function updateObject(obj) {
 
 // console.log(updateObject(object));
 
+
 //Self-reference
-function personMaker() {
+const personMaker = function() {
   var person = {
     firstName: 'Paul',
     lastName: 'Jones',
@@ -51,5 +52,28 @@ function personMaker() {
   return person;
 }
 
-let test = personMaker();
-console.log(test.fullName()); // should be Paul Jones
+// let test = personMaker();
+// console.log(test.fullName()); // should be Paul Jones
+
+
+
+//Key Deleter 
+function keyDeleter(obj) {
+
+  delete obj.foo;
+  delete obj.bar;
+
+  return obj;
+
+}
+
+var sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang',
+};
+
+console.log(keyDeleter(sampleObj));
+
+
