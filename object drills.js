@@ -31,7 +31,7 @@ const updateObject = function(obj) {
   obj.bang = 'bang';
 
   return obj;
-}
+};
 
 // let object = createMyObject();
 
@@ -50,7 +50,7 @@ const personMaker = function() {
     },
   };
   return person;
-}
+};
 
 // let test = personMaker();
 // console.log(test.fullName()); // should be Paul Jones
@@ -74,6 +74,28 @@ var sampleObj = {
   bang: 'bang',
 };
 
-console.log(keyDeleter(sampleObj));
+//console.log(keyDeleter(sampleObj));
+
+//Objects drills 2
+// Make student reports
+
+const students = [
+  {
+    name: 'Tim',
+    grade: 'B',
+  },
+  {
+    name: 'Sue',
+    grade: 'A',
+  }
+];
 
 
+function makeStudentReport(data) {  // does this have to return a new array with .map??
+  return data.forEach(student => {
+    console.log(`${student.name} Grade = ${student.grade} `); 
+  });
+}
+
+
+//makeStudentReport(students); //logs student and their grade
