@@ -174,4 +174,21 @@ loaf.prototype.hydration = function() {
   return (this.water / this.flour) * 100;
 };
 const bread = new loaf();
-console.log(bread.hydration());
+//console.log(bread.hydration());
+
+
+const obj = {
+	foo: 'car',
+	bar: 'bmw',
+	fum: 'fan',
+	quux: 'quiz',
+	spam: 'email'
+}
+
+const loopObj = function(object) {
+	for(let key in object) {
+		console.log(`${key} ${object[key]}`);
+	}
+}
+
+loopObj(obj);
