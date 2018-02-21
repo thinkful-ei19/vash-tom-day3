@@ -125,3 +125,40 @@ function findById(items,idNum) {
 }
 //const data = [{ id: 1, foo: 'bar' }, { id: 2, foo: 'bizz' }];
 //console.log(findById(data, 2)); // should return {id: 2, foo: 'bizz'}
+
+
+
+
+//Validate object keys
+// running the function with `objectA` and `expectedKeys`
+// should return `true`
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
+};
+
+// running the function with `objectB` and `expectedKeys`
+// should return `false`
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria',
+};
+
+const expectedKey = ['id', 'name', 'age', 'city'];
+
+function validateKeys(object, expectedKeys) {
+  let arr = Object.keys(object);
+
+  	if(expectedKeys.length !== arr.length) {
+  		return false;
+  	} else {
+  		return true;
+  	}
+  
+
+}
+
+console.log(validateKeys(objectA, expectedKey));
