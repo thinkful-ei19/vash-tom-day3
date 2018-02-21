@@ -198,23 +198,36 @@ const hobbitMeals = {
   meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
 function fourthMeal(whoseMeals) {
-   console.log(whoseMeals.meals[4]);
+  console.log(whoseMeals.meals[4]);
 } 
 fourthMeal(hobbitMeals);
 
 
 //(4)
 const people = [
-	{name: "Superman", jobTitle: "super hero"},
-	{name: "Sherlock Holmes", jobTitle: "detective"},
-	{name: "Batman", jobTitle: "super hero"},
-	{name: "Venom", jobTitle: "super venom"}
-]
+  {name: 'Superman', jobTitle: 'super hero', boss: 'Batman'},
+  {name: 'Sherlock Holmes', jobTitle: 'detective', boss: 'Batman'},
+  {name: 'Batman', jobTitle: 'super hero'},
+  {name: 'Venom', jobTitle: 'super venom',boss: 'Batman'}
+];
 
 const superPeople = function(indiv){
-	indiv.forEach(ppl => {
-		console.log(`${ppl.name} ${ppl.jobTitle}`);}
-	)}
+  indiv.forEach(ppl => {
+    console.log(`${ppl.name} ${ppl.jobTitle}`);}
+  );};
 	
 
-superPeople(people);
+//superPeople(people);
+
+//(5) Properties that aren't there
+
+const whoTheBoss = function (indiv) {
+  indiv.forEach(ppl => {
+    if (!ppl.hasOwnProperty('boss')) { 
+      console.log(`${ppl.jobTitle} ${ppl.name} doesn't report to anybody.`);
+    } else {
+      console.log(`${ppl.jobTitle} ${ppl.name} reports to ${ppl.boss}.`);
+    }
+  });
+};
+whoTheBoss(people);
