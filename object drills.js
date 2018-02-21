@@ -161,4 +161,17 @@ function validateKeys(object, expectedKeys) {
 
 }
 
-console.log(validateKeys(objectA, expectedKey));
+//console.log(validateKeys(objectA, expectedKey));
+
+//Object Drills Gist
+
+//(1)
+function loaf(flour,water) {
+  this.flour = 300;
+  this.water = 210;
+}
+loaf.prototype.hydration = function() {
+  return (this.water / this.flour) * 100;
+};
+const bread = new loaf();
+console.log(bread.hydration());
