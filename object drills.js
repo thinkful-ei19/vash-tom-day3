@@ -79,19 +79,22 @@ var sampleObj = {
 //Objects drills 2
 // Make student reports
 
-const students = [
+let students = [
   {
     name: 'Tim',
-    grade: 'B',
+    status: 'Current student',
+    course: 'Biology'
   },
   {
     name: 'Sue',
-    grade: 'A',
+    status: 'Withdrawn',
+    course: 'Mathematics'
   }
 ];
 
 
 function makeStudentReport(data) {  // does this have to return a new array with .map??
+
   return data.forEach(student => {
     console.log(`${student.name} Grade = ${student.grade} `); 
   });
@@ -99,3 +102,14 @@ function makeStudentReport(data) {  // does this have to return a new array with
 
 
 //makeStudentReport(students); //logs student and their grade
+
+
+function enrollInSummerSchool(students) {
+	students.forEach(person => {
+		person.status = 'In Summer school';
+		console.log(students);
+	});
+}
+
+
+enrollInSummerSchool(students);
