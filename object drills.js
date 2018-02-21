@@ -200,7 +200,7 @@ const hobbitMeals = {
 function fourthMeal(whoseMeals) {
   console.log(whoseMeals.meals[4]);
 } 
-fourthMeal(hobbitMeals);
+//fourthMeal(hobbitMeals);
 
 
 //(4)
@@ -230,4 +230,26 @@ const whoTheBoss = function (indiv) {
     }
   });
 };
-whoTheBoss(people);
+//whoTheBoss(people);
+
+//(6)
+
+let cipher = {str: 'craft block argon meter bells brown croon droop'};
+
+const decode = function(word) {
+  if (word[0].charCodeAt() > 100) return ' ';
+  return word[word[0].charCodeAt() - 96];
+};
+
+const decodeWords = function(words) {
+	let arrKey = Object.keys(words);
+	let word2 = words[arrKey];
+
+  	return word2
+    .split(' ')
+    .map(decode)
+    .join('');
+};
+
+console.log(decodeWords(cipher));
+
