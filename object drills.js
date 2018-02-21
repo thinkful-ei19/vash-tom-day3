@@ -176,19 +176,28 @@ loaf.prototype.hydration = function() {
 const bread = new loaf();
 //console.log(bread.hydration());
 
-
+//(2)
 const obj = {
-	foo: 'car',
-	bar: 'bmw',
-	fum: 'fan',
-	quux: 'quiz',
-	spam: 'email'
-}
+  foo: 'car',
+  bar: 'bmw',
+  fum: 'fan',
+  quux: 'quiz',
+  spam: 'email'
+};
 
 const loopObj = function(object) {
-	for(let key in object) {
-		console.log(`${key} ${object[key]}`);
-	}
-}
+  for(let key in object) {
+    console.log(`${key} ${object[key]}`);
+  }
+};
 
-loopObj(obj);
+//loopObj(obj);
+
+//(3)
+const hobbitMeals = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+function fourthMeal(whoseMeals) {
+   console.log(whoseMeals.meals[4]);
+} 
+fourthMeal(hobbitMeals);
