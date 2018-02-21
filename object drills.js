@@ -22,4 +22,18 @@ const createMyObject = function () {
   };
 };
 
-console.log(createMyObject());
+
+//Object Update
+function updateObject(obj) {
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
+
+  return obj;
+}
+
+// let object = createMyObject();
+
+// console.log(updateObject(object));
+
