@@ -257,11 +257,11 @@ const decodeWords = function(words) {
 
 const createCharacter = function (name, race, origin, attack, defense) {
   return {
-    name: name,
-    race: race,
-    origin: origin,
-    attack: attack,
-    defense: defense,
+    name,
+    race,
+    origin,
+    attack,
+    defense,
     describe: function () {
       console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
     },
